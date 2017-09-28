@@ -5,20 +5,21 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution(object):
     def largestValues(self, root):
         """
         :type root: TreeNode
         :rtype: List[int]
         """
-        
+
         self.list = []
         self.findDfs(root, 0)
-        return 
-
+        return self.list
 
     def findDfs(self, node, level):
-        if not node: return None
+        if not node:
+            return None
 
         if level == len(self.list):
             self.list.append(node.val)
